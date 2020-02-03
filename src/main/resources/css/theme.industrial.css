@@ -1,3 +1,8 @@
 .has-error .invalid-feedback{
     display: block;
 }
+
+.form-group .form-group,
+.form-group p{
+    margin-bottom: 0;
+}
