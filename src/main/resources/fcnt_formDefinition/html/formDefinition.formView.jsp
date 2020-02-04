@@ -39,27 +39,7 @@
                 <div vc-recaptcha theme="'light'" key="vm.getCaptchaKey()" on-create="vm.notifyOfCaptchaLoad()" lang="vm.getContextualData().locale" ng-model="vm.captchaResponse"></div>
             </div>
         </div>
-<%--<script>--%>
-<%--    var hover=function(elt){--%>
-<%--        var form = elt.closest("form");--%>
-<%--        var ctrl = form.parentElement;--%>
-<%--        // var formName = form.name;--%>
 
-<%--        var formName = form.getAttribute("name");--%>
-<%--        var formDId = ctrl.getAttribute("form-display-id");--%>
-<%--        var data = new FormData(form);--%>
-
-<%--        var _data_={}--%>
-<%--        for(var pair of data.entries()){--%>
-<%--            var key = pair[0];--%>
-<%--            var value = pair[1];--%>
-<%--            _data_[key]=value;--%>
-<%--        }--%>
-<%--        _data_["form-display-id"]=formDId;--%>
-
-<%--        window.wem._hackNextPreSync(_data_,formName)--%>
-<%--    };--%>
-<%--</script>--%>
         <div class="form-group" ng-show="vm.showFormControlButtons()">
             <div class="col-sm-offset-2 col-sm-10" ng-if="vm.currentForm.controls == undefined">
                 <button class="btn btn-sm btn-default" type="button"
@@ -95,7 +75,7 @@
                         message-key="angular.ffController.button.reset">
                 </button>
             </div>
-<%--            onmouseover="hover(this)"--%>
+
             <div class="col-sm-offset-2 col-sm-10" ng-if="vm.currentForm.controls != undefined">
                 <button class="btn btn-sm btn-default" type="button"
                         ng-click="vm.update(false); vm.scrollToTop()"
@@ -118,8 +98,6 @@
                     <span ng-if="vm.currentForm.controls.submitLabel == undefined" message-key="angular.ffController.button.submit"></span>
                 </button>
 
-
-                <!--onmouseover="hover(this)"-->
                 <button class="btn btn-sm btn-default"
                         type="button"
                         data-submit="customsubmit"
@@ -129,7 +107,6 @@
                     <span ng-if="vm.currentForm.controls.nextLabel != undefined">{{vm.currentForm.controls.nextLabel}}</span>
                     <span ng-if="vm.currentForm.controls.nextLabel == undefined" message-key="angular.ffController.button.nextStep"></span>
                 </button>
-
 
                 <button class="btn btn-sm btn-danger"
                         type="button" ng-click="vm.reset()"
