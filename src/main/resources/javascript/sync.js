@@ -1,5 +1,7 @@
 // (function(){
     synchToJCustomer=function(elt){
+        if(!window.wem) return;
+
         // console.log("window.digitalData : ",window.digitalData);
         // console.log("window.wem : ",window.wem);
         var form = elt.closest("form");

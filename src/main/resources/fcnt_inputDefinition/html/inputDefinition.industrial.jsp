@@ -16,7 +16,7 @@
            id="{{input.name}}-id"
            ng-model-options="{allowInvalid:true}"
            placeholder="{{input.placeholder}}"
-           class="form-control {{input.inputsize}}"
+           class="form-control form-control-{{input.inputsize}}"
            name="{{input.name}}"
            ng-model="input.value"
            ng-required="isRequired()"

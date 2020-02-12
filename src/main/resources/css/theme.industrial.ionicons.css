@@ -1,0 +1,40 @@
+/*If used with the industrial Template Set it is not required to load this again*/
+/*@font-face{*/
+/*    font-family:"Ionicons";*/
+/*    src:url("../fonts/ionicons.eot?v=4.6.3");*/
+/*    src:url("../fonts/ionicons.eot?v=4.6.3#iefix") format("embedded-opentype"),*/
+/*        url("../fonts/ionicons.woff2?v=4.6.3") format("woff2"),*/
+/*        url("../fonts/ionicons.woff?v=4.6.3") format("woff"),*/
+/*        url("../fonts/ionicons.ttf?v=4.6.3") format("truetype"),*/
+/*        url("../fonts/ionicons.svg?v=4.6.3#Ionicons") format("svg");*/
+/*    font-weight:normal;*/
+/*    font-style:normal*/
+/*}*/
+
+/*
+.glyphicon is a BS3 specific component and was removed in BS4
+I cannot override the src template of the calendar
+so redefine the value base on ionicons used in industrial
+*/
+.glyphicon,
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before{
+    display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-chevron-left:before {
+    content: "\f3cf";
+}
+.glyphicon-chevron-right:before {
+    content: "\f3d1";
+}

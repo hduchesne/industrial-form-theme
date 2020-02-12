@@ -88,6 +88,7 @@
         <configuration>
           <instructions>
             <Jahia-Module-Priority>4</Jahia-Module-Priority>
+            <Jahia-Static-Resources>/css,/fonts,/javascript</Jahia-Static-Resources>
           </instructions>
         </configuration>
       </plugin>
