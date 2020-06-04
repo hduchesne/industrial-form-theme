@@ -16,21 +16,21 @@ form .btn {
 .uib-weeks .h6{
     font-size: .7rem;
 }
-.uib-button-bar .btn-success{
-    color: #fff;
-    background-color: #fd5f00;
-    border-color: #fd5f00;
-}
-.uib-button-bar .btn-info{
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-.uib-button-bar .btn-danger{
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40;
-}
+/*.uib-button-bar .btn-success{*/
+/*    color: #fff;*/
+/*    background-color: #fd5f00;*/
+/*    border-color: #fd5f00;*/
+/*}*/
+/*.uib-button-bar .btn-info{*/
+/*    color: #fff;*/
+/*    background-color: #6c757d;*/
+/*    border-color: #6c757d;*/
+/*}*/
+/*.uib-button-bar .btn-danger{*/
+/*    color: #fff;*/
+/*    background-color: #343a40;*/
+/*    border-color: #343a40;*/
+/*}*/
 .uib-day .btn,
 .btn.uib-title{
     border: 1px solid rgba(0,0,0,.15);
@@ -116,10 +116,10 @@ form .btn {
 .multisteps-form__progress-btn:first-child:after {
     display: none;
 }
-.multisteps-form__progress-btn.js-active {
-    /*color: #007bff;*/
-    color:#fd5f00;
-}
+/*.multisteps-form__progress-btn.js-active {*/
+/*    !*color: #007bff;*!*/
+/*    color:#fd5f00;*/
+/*}*/
 .multisteps-form__progress-btn.js-active:before {
     -webkit-transform: translateX(-50%) scale(1.2);
     transform: translateX(-50%) scale(1.2);
