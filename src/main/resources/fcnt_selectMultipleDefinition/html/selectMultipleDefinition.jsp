@@ -6,6 +6,16 @@
         {{input.label}}<span ng-if="isRequired()" ng-show="asteriskResolver()"><sup>&nbsp;<i class="fa fa-asterisk fa-sm"></i></sup></span>
     </label>
 
+    <span role="button"
+<%--          data-toggle="popover"--%>
+          title="{{input.label}}"
+          data-content="{{input.helptext}}"
+          ng-show="input.helptext != undefined"
+          id="{{input.name}}-enhanced-help"
+          onclick="popoverToggle(this)">
+        <i class="far fa-question-circle"></i>
+    </span>
+
 <%--    <div class="col-sm-10">--%>
     <select multiple
             type="select"
@@ -22,10 +32,11 @@
         <option ng-repeat="option in input.options | filter: 'true' : null : visible" value="{{option.key}}">{{option.value}}</option>
     </select>
 
-    <small id="{{input.name}}-help" class="form-text text-muted"
-           ng-show="input.helptext != undefined">
-        {{input.helptext}}
-    </small>
+<%--    <small id="{{input.name}}-help" class="form-text text-muted"--%>
+<%--           ng-show="input.helptext != undefined">--%>
+<%--        {{input.helptext}}--%>
+<%--    </small>--%>
+
 <%--    <span class="help-block"--%>
 <%--          ng-show="input.helptext != undefined">--%>
 <%--        {{input.helptext}}--%>

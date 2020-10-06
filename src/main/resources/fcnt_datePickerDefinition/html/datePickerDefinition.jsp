@@ -30,6 +30,15 @@
             <sup>&nbsp;<i class="fa fa-asterisk fa-sm"></i></sup>
         </span>
     </label>
+    <span role="button"
+<%--          data-toggle="popover"--%>
+          title="{{input.label}}"
+          data-content="{{input.helptext}}"
+          ng-show="input.helptext != undefined"
+          id="{{input.name}}-enhanced-help"
+          onclick="popoverToggle(this)">
+        <i class="far fa-question-circle"></i>
+    </span>
 
 <%--    ng-class="{'left15':!readOnly}"--%>
     <div>

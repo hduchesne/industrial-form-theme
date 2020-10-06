@@ -10,6 +10,16 @@
         </span>
     </label>
 
+    <span role="button"
+<%--          data-toggle="popover"--%>
+          title="{{input.label}}"
+          data-content="{{input.helptext}}"
+          ng-show="input.helptext != undefined"
+          id="{{input.name}}-enhanced-help"
+          onclick="popoverToggle(this)">
+        <i class="far fa-question-circle"></i>
+    </span>
+
     <div class="form-check" ff-validations ff-logic
          ng-repeat="checkboxOption in input.checkboxes | filter: 'true' : null : visible">
         <input class="form-check-input"
@@ -30,10 +40,10 @@
         </label>
     </div>
 
-    <small id="{{input.name}}-help" class="form-text text-muted"
-           ng-show="input.helptext != undefined">
-        {{input.helptext}}
-    </small>
+<%--    <small id="{{input.name}}-help" class="form-text text-muted"--%>
+<%--           ng-show="input.helptext != undefined">--%>
+<%--        {{input.helptext}}--%>
+<%--    </small>--%>
 
     <div class="invalid-feedback"
          ng-repeat="(validationName, validation) in input.validations"

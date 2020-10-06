@@ -4,13 +4,24 @@
      ng-show="resolveLogic()">
 
 
-    <legend class="control-label">
+    <legend class="control-label" style="font-size:inherit;">
         {{input.label}}
         <span ng-if="isRequired()"
               ng-show="asteriskResolver()">
             <sup>&nbsp;<i class="fa fa-asterisk fa-sm"></i></sup>
         </span>
+        <span role="button"
+<%--              data-toggle="popover"--%>
+              title="{{input.label}}"
+              data-content="{{input.helptext}}"
+              ng-show="input.helptext != undefined"
+              id="{{input.name}}-enhanced-help"
+              onclick="popoverToggle(this)">
+            <i class="far fa-question-circle"></i>
+        </span>
     </legend>
+
+
 
     <div class="form-check form-check-inline" ff-validations ff-logic
          ng-repeat="(radiok, radiov) in input.radios | filter: 'true' : null : visible">
@@ -45,10 +56,10 @@
         </label>
     </div>
 
-    <small id="{{input.name}}-help" class="form-text text-muted"
-           ng-show="input.helptext != undefined">
-        {{input.helptext}}
-    </small>
+<%--    <small id="{{input.name}}-help" class="form-text text-muted"--%>
+<%--           ng-show="input.helptext != undefined">--%>
+<%--        {{input.helptext}}--%>
+<%--    </small>--%>
 
     <div class="invalid-feedback"
          ng-repeat="(validationName, validation) in input.validations"

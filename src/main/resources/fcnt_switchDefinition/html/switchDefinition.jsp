@@ -15,7 +15,17 @@
                ff-validations
                ff-logic>
         <label class="custom-control-label" for="{{input.name}}-id">{{input.label}}</label>
+        <span role="button"
+<%--              data-toggle="popover"--%>
+              title="{{input.label}}"
+              data-content="{{input.helptext}}"
+              ng-show="input.helptext != undefined"
+              id="{{input.name}}-enhanced-help"
+              onclick="popoverToggle(this)">
+            <i class="far fa-question-circle"></i>
+        </span>
     </div>
+
 
 <%--        <span class="switch {{input.inputsize}}"--%>
 <%--              ng-click="readOnly ? input.value : input.value =! input.value"--%>
@@ -36,9 +46,9 @@
 <%--            </span>--%>
 <%--        </span>--%>
 
-    <small id="{{input.name}}-help" class="form-text text-muted"
-           ng-show="input.helptext != undefined">
-        {{input.helptext}}
-    </small>
+<%--    <small id="{{input.name}}-help" class="form-text text-muted"--%>
+<%--           ng-show="input.helptext != undefined">--%>
+<%--        {{input.helptext}}--%>
+<%--    </small>--%>
 
 </div>

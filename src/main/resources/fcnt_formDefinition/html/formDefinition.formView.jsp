@@ -22,6 +22,7 @@
                   dispatch-active-input-event="vm.dispatchActiveInputEvent(type)"
                   validation-display-level="{{vm.validationDisplayLevel}}">
         </ff-input>
+
         <div class="row"
              ng-if="vm.isLayoutAvailable && !input.isInFieldset"
              ng-repeat="rows in vm.currentForm.layoutJson.steps[vm.currentStep].rows">

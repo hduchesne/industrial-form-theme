@@ -54,7 +54,7 @@
   </parent>
   <groupId>org.jahia.se.modules</groupId>
   <artifactId>industrial-form-theme</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>8.0.0.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>industrial-form-theme</name>
   <description>This is the custom module (industrial-form-theme) for running on a Digital Experience Manager server.</description>

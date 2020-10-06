@@ -3,3 +3,4 @@
 <template:addResources type="css" resources="theme.industrial.css" />
 <template:addResources type="css" resources="theme.industrial.ionicons.css" />
 <template:addResources type="javascript" resources="sync.js" />
+<template:addResources type="javascript" resources="custom.js" />
