@@ -16,7 +16,7 @@
          ng-repeat="(radiok, radiov) in input.radios | filter: 'true' : null : visible">
         <input class="form-check-input"
                type="radio"
-               id="{{input.name}}-id"
+               id="{{input.name}}-{{radiov.key}}"
                name="{{input.name}}"
                ng-model="input.value"
                ng-model-options="{'allowInvalid':true}"
@@ -40,7 +40,7 @@
 <%--               ff-focus-tracker="{{input.name}}_{{radiov.key}}"--%>
 <%--               ng-init="input.value.length > 0 ? makeDirty() : ''">--%>
 
-        <label class="form-check-label" for="{{input.name}}-id">
+        <label class="form-check-label" for="{{input.name}}-{{radiov.key}}">
             {{radiov.value}}
         </label>
     </div>

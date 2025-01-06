@@ -4,7 +4,7 @@
         <div class="multisteps-form__progress ml-auto mr-auto mb-4">
             <button class="multisteps-form__progress-btn"
                     ng-repeat="step in form.steps"
-                    ng-class="{'js-active text-primary': currentStep >= $index}"
+                    ng-class="{'js-active text-primary': currentStep >= $index, 'current':currentStep == $index}"
                     type="button"
                     title="User Info">
                 {{ step.label }}

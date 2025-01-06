@@ -14,7 +14,7 @@
          ng-repeat="checkboxOption in input.checkboxes | filter: 'true' : null : visible">
         <input class="form-check-input"
                type="checkbox"
-               id="{{input.name}}-id"
+               id="{{input.name}}-{{checkboxOption.key}}"
                name="{{input.name}}"
                checklist-model="input.value"
                ng-required="checkValues()"
@@ -25,7 +25,7 @@
                ff-focus-tracker="{{input.name}}_{{checkboxOption.key}}"
                ng-init="input.value.length > 0 ? makeDirty() : ''">
 
-        <label class="form-check-label" for="{{input.name}}-id">
+        <label class="form-check-label" for="{{input.name}}-{{checkboxOption.key}}">
             {{checkboxOption.value}}
         </label>
     </div>
