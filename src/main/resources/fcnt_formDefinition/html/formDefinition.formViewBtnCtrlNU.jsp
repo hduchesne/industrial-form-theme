@@ -1,13 +1,13 @@
 <%--<div class="col-sm-offset-2 col-sm-10" ng-if="vm.currentForm.controls != undefined">--%>
-<div class="d-flex mt-4" ng-if="vm.currentForm.controls != undefined">
-    <button class="btn btn-primary px-2 py-2" type="button"
+<div class="d-flex mt-4 btn-control" ng-if="vm.currentForm.controls != undefined">
+    <button class="btn btn-primary prev" type="button"
             ng-click="vm.update(false); vm.scrollToTop()"
             ng-disabled="vm.getFormController().$submitted"
             ng-show="!vm.currentForm.controls.hidePrevious&&vm.currentStep>0&&!vm.isSubmitted()">
         <span ng-if="vm.currentForm.controls.previousLabel != undefined">{{vm.currentForm.controls.previousLabel}}</span>
         <span ng-if="vm.currentForm.controls.previousLabel == undefined" message-key="angular.ffController.button.previousStep"></span>
     </button>
-    <button class="btn btn-primary ml-auto px-2 py-2"
+    <button class="btn btn-primary submit"
             type="button"
             data-submit="customsubmit"
             ng-click="vm.update(true); vm.scrollToTop()"
@@ -22,7 +22,7 @@
     </button>
 
 <%--    <button class="btn btn-sm btn-default"--%>
-    <button class="btn btn-primary ml-auto px-2 py-2"
+    <button class="btn btn-primary next"
             type="button"
             data-submit="customsubmit"
             ng-click="vm.update(true); vm.scrollToTop()"
@@ -32,7 +32,7 @@
         <span ng-if="vm.currentForm.controls.nextLabel == undefined" message-key="angular.ffController.button.nextStep"></span>
     </button>
 
-    <button class="btn btn-danger ml-auto px-2 py-2"
+    <button class="btn btn-danger reset"
             type="button" ng-click="vm.reset()"
             ng-disabled="vm.getFormController().$submitted || vm.currentForm.steps[vm.currentStep].resetDisabled"
             ng-show="!vm.currentForm.controls.hideReset&&!vm.isSubmitted()">

@@ -16,6 +16,7 @@
             class="form-control {{input.inputsize}}"
             ng-model-options="{allowInvalid:true}"
             name="{{input.name}}"
+            ng-class="{'placeholder': input.value == '' || input.value === null}"
             ng-model="input.value"
             ng-required="isRequired()"
             ng-disabled="readOnly"
