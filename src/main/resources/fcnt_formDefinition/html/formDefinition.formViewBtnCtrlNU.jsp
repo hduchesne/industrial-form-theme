@@ -24,6 +24,7 @@
 <%--    <button class="btn btn-sm btn-default"--%>
     <button class="btn btn-primary next"
             type="button"
+            onclick="synchToJCustomer(this)"
             data-submit="customsubmit"
             ng-click="vm.update(true); vm.scrollToTop()"
             ng-disabled="vm.getFormController().$invalid || vm.getFormController().$submitted"

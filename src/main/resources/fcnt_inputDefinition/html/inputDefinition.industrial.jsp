@@ -12,7 +12,7 @@
     </label>
 
     <input type="text"
-           onblur="synchToJCustomer(this)"
+<%--           onblur="synchToJCustomer(this)"--%>
            id="{{input.name}}-id"
            ng-model-options="{allowInvalid:true}"
            placeholder="{{input.placeholder}}"
